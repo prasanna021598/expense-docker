@@ -3,9 +3,9 @@ EXPOSE 8080
 ENV DB_HOST=mysql
 
 # Use adduser for Alpine instead of useradd
-RUN useradd -D expense && \
-    mkdir /opt/server && \
-    chown expense:expense -R /opt/server
+RUN useradd  expense
+RUN mkdir /opt/server
+RUN chown expense:expense -R /opt/server
 WORKDIR /opt/server
 COPY *.json .
 COPY *.js .
