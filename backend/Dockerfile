@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:20-alpine
 EXPOSE 8080
 ENV DB_HOST=mysql
 RUN useradd expense
